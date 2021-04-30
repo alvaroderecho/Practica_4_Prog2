@@ -35,6 +35,7 @@ BSTNode * _bst_node_new(){
 
 void * node_find_min (BSTNode * node);
 void * node_find_max (BSTNode * node);
+Bool node_contains (BSTNode * node, const void * elem);
 
 void _bst_node_free (BSTNode * pn){
     if (!pn) return;
@@ -201,6 +202,26 @@ void * node_find_max (BSTNode * node) { //privada
 
     if (!node) return node->info;
 
-    node_find_min(node->right);
+    node_find_max(node->right);
+
+}
+
+Bool tree_contains (BSTree * tree, const void * elem) {
+
+    if (!tree || !elem) return FALSE;
+
+    if (node_contains(tree->root, elem) == TRUE) return TRUE;
+
+    return FALSE;
+}
+
+Bool node_contains (BSTNode * node, const void * elem) {
+
+    if (!node || !elem) return FALSE;
+
+    if (node->info == elem) return TRUE;
+
+    node_contains(node->left, elem);
+    node_contains(node->right,elem);
 
 }
