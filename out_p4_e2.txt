@@ -1,0 +1,100 @@
+./p4_e2 data50K.txt id
+50000 lines
+**Raw data**
+
+Search queue building time: 47561 ticks (0.047561 seconds)
+Search queue size: 50000
+Front (min) element in search queue: [6, Lapa,_La, 0, 0] - 3 ticks (0.000003 seconds)
+Back (max) element in search queue: [273907, Pacios, 0, 0] - 2 ticks (0.000002 seconds)
+Search queue size: 25000
+Front (min) element in search queue: [137233, Güexes, 0, 0] - 2 ticks (0.000002 seconds)
+Back (max) element in search queue: [273907, Pacios, 0, 0] - 2 ticks (0.000002 seconds)
+
+./p4_e2_bal data50K.txt id
+50000 lines
+**Sorted data**
+
+Search queue building time: 23656 ticks (0.023656 seconds)
+Search queue size: 50000
+Front (min) element in search queue: [6, Lapa,_La, 0, 0] - 4 ticks (0.000004 seconds)
+Back (max) element in search queue: [273907, Pacios, 0, 0] - 2 ticks (0.000002 seconds)
+Search queue size: 25000
+Front (min) element in search queue: [137233, Güexes, 0, 0] - 2 ticks (0.000002 seconds)
+Back (max) element in search queue: [273907, Pacios, 0, 0] - 1 ticks (0.000001 seconds)
+
+./p4_e2 data50K.txt tag
+50000 lines
+**Raw data**
+
+Search queue building time: 120083 ticks (0.120083 seconds)
+Search queue size: 50000
+Front (min) element in search queue: [229359, 0_Portiño, 0, 0] - 4 ticks (0.000004 seconds)
+Back (max) element in search queue: [135232, Ḥuentes, 0, 0] - 2 ticks (0.000002 seconds)
+Search queue size: 25000
+Front (min) element in search queue: [13769, Loma_Alta, 0, 0] - 1 ticks (0.000001 seconds)
+Back (max) element in search queue: [135232, Ḥuentes, 0, 0] - 1 ticks (0.000001 seconds)
+
+./p4_e2_bal data50K.txt tag
+50000 lines
+**Sorted data**
+
+Search queue building time: 30475 ticks (0.030475 seconds)
+Search queue size: 50000
+Front (min) element in search queue: [229359, 0_Portiño, 0, 0] - 4 ticks (0.000004 seconds)
+Back (max) element in search queue: [135232, Ḥuentes, 0, 0] - 2 ticks (0.000002 seconds)
+Search queue size: 25000
+Front (min) element in search queue: [13769, Loma_Alta, 0, 0] - 2 ticks (0.000002 seconds)
+Back (max) element in search queue: [135232, Ḥuentes, 0, 0] - 2 ticks (0.000002 seconds)
+
+./p4_e2 data10.txt id
+10 lines
+**Raw data**
+
+Search queue building time: 6 ticks (0.000006 seconds)
+Search queue size: 10
+Front (min) element in search queue: [14621, Río_Zújar, 0, 0] - 4 ticks (0.000004 seconds)
+Back (max) element in search queue: [272688, Zurgena, 0, 0] - 2 ticks (0.000002 seconds)
+[14621, Río_Zújar, 0, 0][55631, Zúñiga, 0, 0][70050, Arroyo_del_Zumajo_del_Olivar, 0, 0][80643, Río_Zumeta, 0, 0][89411, Zújar, 0, 0][94865, Arroyo_de_la_Zurita, 0, 0][114979, Zújar, 0, 0][133613, Zulema, 0, 0][179636, Zujaira, 0, 0][272688, Zurgena, 0, 0]
+Search queue size: 5
+Front (min) element in search queue: [94865, Arroyo_de_la_Zurita, 0, 0] - 2 ticks (0.000002 seconds)
+Back (max) element in search queue: [272688, Zurgena, 0, 0] - 3 ticks (0.000003 seconds)
+
+./p4_e2_bal data10.txt id
+10 lines
+**Sorted data**
+
+Search queue building time: 7 ticks (0.000007 seconds)
+Search queue size: 10
+Front (min) element in search queue: [14621, Río_Zújar, 0, 0] - 3 ticks (0.000003 seconds)
+Back (max) element in search queue: [272688, Zurgena, 0, 0] - 3 ticks (0.000003 seconds)
+[14621, Río_Zújar, 0, 0][55631, Zúñiga, 0, 0][70050, Arroyo_del_Zumajo_del_Olivar, 0, 0][80643, Río_Zumeta, 0, 0][89411, Zújar, 0, 0][94865, Arroyo_de_la_Zurita, 0, 0][114979, Zújar, 0, 0][133613, Zulema, 0, 0][179636, Zujaira, 0, 0][272688, Zurgena, 0, 0]
+Search queue size: 5
+Front (min) element in search queue: [94865, Arroyo_de_la_Zurita, 0, 0] - 3 ticks (0.000003 seconds)
+Back (max) element in search queue: [272688, Zurgena, 0, 0] - 2 ticks (0.000002 seconds)
+
+./p4_e2 data10.txt tag
+10 lines
+**Raw data**
+
+Search queue building time: 9 ticks (0.000009 seconds)
+Search queue size: 10
+Front (min) element in search queue: [94865, Arroyo_de_la_Zurita, 0, 0] - 4 ticks (0.000004 seconds)
+Back (max) element in search queue: [55631, Zúñiga, 0, 0] - 3 ticks (0.000003 seconds)
+[94865, Arroyo_de_la_Zurita, 0, 0][70050, Arroyo_del_Zumajo_del_Olivar, 0, 0][80643, Río_Zumeta, 0, 0][14621, Río_Zújar, 0, 0][179636, Zujaira, 0, 0][133613, Zulema, 0, 0][272688, Zurgena, 0, 0][89411, Zújar, 0, 0][114979, Zújar, 0, 0][55631, Zúñiga, 0, 0]
+Search queue size: 5
+Front (min) element in search queue: [133613, Zulema, 0, 0] - 2 ticks (0.000002 seconds)
+Back (max) element in search queue: [55631, Zúñiga, 0, 0] - 2 ticks (0.000002 seconds)
+
+./p4_e2_bal data10.txt tag
+10 lines
+**Sorted data**
+
+Search queue building time: 8 ticks (0.000008 seconds)
+Search queue size: 10
+Front (min) element in search queue: [94865, Arroyo_de_la_Zurita, 0, 0] - 4 ticks (0.000004 seconds)
+Back (max) element in search queue: [55631, Zúñiga, 0, 0] - 2 ticks (0.000002 seconds)
+[94865, Arroyo_de_la_Zurita, 0, 0][70050, Arroyo_del_Zumajo_del_Olivar, 0, 0][80643, Río_Zumeta, 0, 0][14621, Río_Zújar, 0, 0][179636, Zujaira, 0, 0][133613, Zulema, 0, 0][272688, Zurgena, 0, 0][89411, Zújar, 0, 0][114979, Zújar, 0, 0][55631, Zúñiga, 0, 0]
+Search queue size: 5
+Front (min) element in search queue: [133613, Zulema, 0, 0] - 2 ticks (0.000002 seconds)
+Back (max) element in search queue: [55631, Zúñiga, 0, 0] - 3 ticks (0.000003 seconds)
+

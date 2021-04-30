@@ -1,0 +1,124 @@
+./p4_e1 data50K.txt "id:88997 tag:Golf_de_Ibiza" id
+50000 lines
+**Raw data**
+
+Tree building time: 43812 ticks (0.043812 seconds)
+Tree size: 50000
+Tree depth: 41
+Min element in tree: [6, Lapa,_La, 0, 0] - 3 ticks (0.000003 seconds)
+Max element in tree: [273907, Pacios, 0, 0] - 2 ticks (0.000002 seconds)
+
+Element found!
+Tree search time: 2 ticks (0.000002 seconds)
+
+Removing element in tree: OK - 3 ticks (0.000003 seconds)
+After removal
+	Tree size: 49999
+	Tree depth: 41
+
+./p4_e1_bal data50K.txt "id:88997 tag:Golf_de_Ibiza" id
+50000 lines
+**Sorted data**
+
+Tree building time: 16160 ticks (0.016160 seconds)
+Tree size: 50000
+Tree depth: 16
+Min element in tree: [6, Lapa,_La, 0, 0] - 2 ticks (0.000002 seconds)
+Max element in tree: [273907, Pacios, 0, 0] - 1 ticks (0.000001 seconds)
+
+Element found!
+Tree search time: 1 ticks (0.000001 seconds)
+
+Removing element in tree: OK - 2 ticks (0.000002 seconds)
+After removal
+	Tree size: 49999
+	Tree depth: 16
+
+./p4_e1 data50K.txt "id:88997 tag:Golf_de_Ibiza" tag
+50000 lines
+**Raw data**
+
+Tree building time: 118578 ticks (0.118578 seconds)
+Tree size: 50000
+Tree depth: 373
+Min element in tree: [229359, 0_Portiño, 0, 0] - 4 ticks (0.000004 seconds)
+Max element in tree: [135232, Ḥuentes, 0, 0] - 2 ticks (0.000002 seconds)
+
+Element found!
+Tree search time: 3 ticks (0.000003 seconds)
+
+Removing element in tree: OK - 3 ticks (0.000003 seconds)
+After removal
+	Tree size: 49999
+	Tree depth: 373
+
+./p4_e1_bal data50K.txt "id:88997 tag:Golf_de_Ibiza" tag
+50000 lines
+**Sorted data**
+
+Tree building time: 29477 ticks (0.029477 seconds)
+Tree size: 50000
+Tree depth: 16
+Min element in tree: [229359, 0_Portiño, 0, 0] - 3 ticks (0.000003 seconds)
+Max element in tree: [135232, Ḥuentes, 0, 0] - 2 ticks (0.000002 seconds)
+
+Element found!
+Tree search time: 2 ticks (0.000002 seconds)
+
+Removing element in tree: OK - 2 ticks (0.000002 seconds)
+After removal
+	Tree size: 49999
+	Tree depth: 16
+
+./p4_e1 data50K.txt "id:889907 tag:Golf_de_Ibiza" id
+50000 lines
+**Raw data**
+
+Tree building time: 43022 ticks (0.043022 seconds)
+Tree size: 50000
+Tree depth: 41
+Min element in tree: [6, Lapa,_La, 0, 0] - 3 ticks (0.000003 seconds)
+Max element in tree: [273907, Pacios, 0, 0] - 2 ticks (0.000002 seconds)
+
+Element NOT found!
+Tree search time: 1 ticks (0.000001 seconds)
+
+./p4_e1_bal data50K.txt "id:889907 tag:Golf_de_Ibiza" id
+50000 lines
+**Sorted data**
+
+Tree building time: 22541 ticks (0.022541 seconds)
+Tree size: 50000
+Tree depth: 16
+Min element in tree: [6, Lapa,_La, 0, 0] - 3 ticks (0.000003 seconds)
+Max element in tree: [273907, Pacios, 0, 0] - 1 ticks (0.000001 seconds)
+
+Element NOT found!
+Tree search time: 2 ticks (0.000002 seconds)
+
+./p4_e1 data50K.txt "id:889907 tag:Golf_de_Ibiza" tag
+50000 lines
+**Raw data**
+
+Tree building time: 118939 ticks (0.118939 seconds)
+Tree size: 50000
+Tree depth: 373
+Min element in tree: [229359, 0_Portiño, 0, 0] - 4 ticks (0.000004 seconds)
+Max element in tree: [135232, Ḥuentes, 0, 0] - 2 ticks (0.000002 seconds)
+
+Element NOT found!
+Tree search time: 3 ticks (0.000003 seconds)
+
+./p4_e1_bal data50K.txt "id:889907 tag:Golf_de_Ibiza" tag
+50000 lines
+**Sorted data**
+
+Tree building time: 29310 ticks (0.029310 seconds)
+Tree size: 50000
+Tree depth: 16
+Min element in tree: [229359, 0_Portiño, 0, 0] - 3 ticks (0.000003 seconds)
+Max element in tree: [135232, Ḥuentes, 0, 0] - 2 ticks (0.000002 seconds)
+
+Element NOT found!
+Tree search time: 3 ticks (0.000003 seconds)
+
