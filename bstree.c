@@ -33,6 +33,9 @@ BSTNode * _bst_node_new(){
     return pn;
 }
 
+void * node_find_min (BSTNode * node);
+void * node_find_max (BSTNode * node);
+
 void _bst_node_free (BSTNode * pn){
     if (!pn) return;
 
@@ -168,3 +171,36 @@ int tree_postOrder (FILE *f, const BSTree * tree){
 
 
 /**** TODO: find_min, find_max, insert, contains, remove ****/
+
+
+void * tree_find_min (BSTree * tree) {
+
+    if (!tree) return NULL;
+
+    return node_find_min(tree->root);
+}
+
+
+void * node_find_min (BSTNode * node) { //privada
+
+    if (!node) return node->info;
+
+    node_find_min(node->left);
+
+}
+
+void * tree_find_max (BSTree * tree) {
+
+    if (!tree) return NULL;
+
+    return node_find_max(tree->root);
+}
+
+
+void * node_find_max (BSTNode * node) { //privada
+
+    if (!node) return node->info;
+
+    node_find_min(node->right);
+
+}

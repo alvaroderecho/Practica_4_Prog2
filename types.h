@@ -12,7 +12,7 @@ typedef enum {
 } Status;
 
 typedef enum {
-    CREATE = 1,
+    CREATE = 1
 
 } Choices;
 
