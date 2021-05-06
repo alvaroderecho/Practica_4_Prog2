@@ -260,15 +260,21 @@ Bool tree_contains(BSTree *tree, const void *elem)
 
 Bool node_contains(BSTNode *node, const void *elem)
 {
-
-    if (!node)
-        return FALSE;
-
-    if (node->info == elem)
+    if (*(int *)node->info == *(int *)elem)
         return TRUE;
-
-    node_contains(node->left, elem);
-    node_contains(node->right, elem);
+    if (*(int *)elem < *(int *)node->info)
+    {
+        if (node->left == NULL)
+            return FALSE;
+        node_contains(node->left, elem);
+    }
+    else
+    {
+        if (node->right == NULL)
+            return FALSE;
+        node_contains(node->right, elem);
+    }
+    return FALSE;
 }
 
 Status tree_insert(BSTree *tree, const void *elem)
@@ -293,7 +299,8 @@ Status node_insert(BSTNode *node, const void *elem)
         if (node->left == NULL)
         {
             new_node = _bst_node_new();
-            if (new_node == NULL) return ERROR;
+            if (new_node == NULL)
+                return ERROR;
             new_node->info = elem;
             node->left = new_node;
             return OK;
@@ -308,7 +315,8 @@ Status node_insert(BSTNode *node, const void *elem)
         if (node->right == NULL)
         {
             new_node = _bst_node_new();
-            if (new_node == NULL) return ERROR;
+            if (new_node == NULL)
+                return ERROR;
             new_node->info = elem;
             node->right = new_node;
             return OK;
