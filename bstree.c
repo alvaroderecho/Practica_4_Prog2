@@ -38,8 +38,8 @@ BSTNode *_bst_node_new()
 
 void *node_find_min(BSTNode *node);
 void *node_find_max(BSTNode *node);
-Bool node_contains(BSTNode *node, const void *elem);
-Status node_insert(BSTNode *node, const void *elem);
+Bool node_contains(BSTNode *node, const void *elem, P_tree_ele_cmp cmp_elem);
+Status node_insert(BSTNode *node, const void *elem, P_tree_ele_cmp cmp_elem);
 
 void _bst_node_free(BSTNode *pn)
 {
@@ -286,27 +286,27 @@ Bool tree_contains(BSTree *tree, const void *elem)
     if (!tree || !elem)
         return FALSE;
 
-    if (node_contains(tree->root, elem) == TRUE)
+    if (node_contains(tree->root, elem, tree->cmp_ele) == TRUE)
         return TRUE;
 
     return FALSE;
 }
 
-Bool node_contains(BSTNode *node, const void *elem)
+Bool node_contains(BSTNode *node, const void *elem, P_tree_ele_cmp cmp_elem)
 {
-    if (*(int *)node->info == *(int *)elem)
+    if (cmp_elem(elem,node->info) == 0)
         return TRUE;
-    if (*(int *)elem < *(int *)node->info)
+    if (cmp_elem(elem,node->info) < 0)
     {
         if (node->left == NULL)
             return FALSE;
-        node_contains(node->left, elem);
+        node_contains(node->left, elem, cmp_elem);
     }
     else
     {
         if (node->right == NULL)
             return FALSE;
-        node_contains(node->right, elem);
+        node_contains(node->right, elem, cmp_elem);
     }
     return FALSE;
 }
@@ -319,16 +319,16 @@ Status tree_insert(BSTree *tree, const void *elem)
     if (tree_contains(tree, elem) == TRUE)
         return OK;
 
-    if (node_insert(tree->root, elem) == TRUE)
+    if (node_insert(tree->root, elem, tree->cmp_ele) == OK)
         return OK;
     return ERROR;
 }
 
-Status node_insert(BSTNode *node, const void *elem)
+Status node_insert(BSTNode *node, const void *elem,P_tree_ele_cmp cmp_elem)
 {
     BSTNode *new_node = NULL;
 
-    if (*(int *)elem < *(int *)node->info)
+    if (cmp_elem(elem,node->info) < 0)
     {
         if (node->left == NULL)
         {
@@ -341,7 +341,7 @@ Status node_insert(BSTNode *node, const void *elem)
         }
         else
 
-            node_insert(node->left, elem);
+            node_insert(node->left, elem,cmp_elem);
     }
     else
     {
@@ -356,7 +356,7 @@ Status node_insert(BSTNode *node, const void *elem)
             return OK;
         }
         else
-            node_insert(node->right, elem);
+            node_insert(node->right, elem, cmp_elem);
     }
 
     return ERROR;
