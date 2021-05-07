@@ -256,10 +256,12 @@ void *tree_find_min(BSTree *tree)
 void *node_find_min(BSTNode *node)
 { //privada
 
-    if (!node)
+    if (!node->left)
         return node->info;
 
-    node_find_min(node->left);
+    return  node_find_min(node->left);
+
+    
 }
 
 void *tree_find_max(BSTree *tree)
@@ -274,10 +276,10 @@ void *tree_find_max(BSTree *tree)
 void *node_find_max(BSTNode *node)
 { //privada
 
-    if (!node)
+    if (!node->right)
         return node->info;
 
-    node_find_max(node->right);
+    return node_find_max(node->right);
 }
 
 Bool tree_contains(BSTree *tree, const void *elem)
@@ -294,6 +296,8 @@ Bool tree_contains(BSTree *tree, const void *elem)
 
 Bool node_contains(BSTNode *node, const void *elem, P_tree_ele_cmp cmp_elem)
 {
+    if (!node) return FALSE;
+
     if (cmp_elem(elem,node->info) == 0)
         return TRUE;
     if (cmp_elem(elem,node->info) < 0)
@@ -327,7 +331,7 @@ Status tree_insert(BSTree *tree, const void *elem)
 Status node_insert(BSTNode *node, const void *elem,P_tree_ele_cmp cmp_elem)
 {
     BSTNode *new_node = NULL;
-
+    if (!node) return ERROR;
     if (cmp_elem(elem,node->info) < 0)
     {
         if (node->left == NULL)
@@ -335,7 +339,7 @@ Status node_insert(BSTNode *node, const void *elem,P_tree_ele_cmp cmp_elem)
             new_node = _bst_node_new();
             if (new_node == NULL)
                 return ERROR;
-            new_node->info = elem;
+            new_node->info = (void *)elem;
             node->left = new_node;
             return OK;
         }
@@ -351,7 +355,7 @@ Status node_insert(BSTNode *node, const void *elem,P_tree_ele_cmp cmp_elem)
             new_node = _bst_node_new();
             if (new_node == NULL)
                 return ERROR;
-            new_node->info = elem;
+            new_node->info = (void *)elem;
             node->right = new_node;
             return OK;
         }

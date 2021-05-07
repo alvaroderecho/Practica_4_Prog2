@@ -45,4 +45,12 @@ p4_e2_bal: p4_e2
 p4_e2.o: p4_e2.c
 	gcc -g -Wall -pedantic -ansi -c p4_e2.c
 
+
+bstree.o: bstree.c bstree.h types.h
+	gcc -g -Wall -pedantic -c bstree.c
+
+vertex.o: vertex.c vertex.h types.h
+	gcc -g -Wall -pedantic -c vertex.c
+
+
 # Rules for bstree, vertex, ... in main Makefile
